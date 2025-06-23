@@ -1,0 +1,110 @@
+/* START border-box fix */
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* END border-box fix */
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #8AB0BF;
+}
+
+h1, h2, h3, h4, h5, p, ul{
+    margin: 0px;
+}
+
+h1{
+
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: #fff;
+text-align: center;
+
+}
+
+h2{
+
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 600;
+  font-style: normal;
+font-size: 30px;
+margin: 5px 0px 10px 0px;
+}
+
+a{
+    font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+font-size: 25px;
+
+}
+ 
+p{
+   
+  font-family: "Habibi", serif;
+  font-weight: 400;
+  font-style: normal;
+margin: 0px 0px 5px 0px;
+
+}
+
+#wrapper {
+    background-color:#A67153 ;
+    display: flex;
+    max-width: 1000px;
+    margin: 0px auto;
+    flex-wrap: wrap;   /* Allows children to wrap */
+}
+/* Add padding to all of the #wrapper child elements */
+#wrapper >* {
+    padding: 40px;
+}
+
+header{
+   background-color:#012340 ;  
+   flex: 1 0 100%;
+   order: 1;
+}
+img{
+    width: 500px ;
+    height: 350px;
+}
+nav{
+   background-color:#2A678C ;  
+   flex: 1 0 200px;
+   order: 2;
+   font-size: 25px;
+    font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+main{
+   background-color:#105A73 ;  
+   order: 3;
+   flex: 1 1 500px;
+}
+aside{
+   background-color:#567884 ;  
+   order: 4;
+   flex: 1 0 201px;
+}
+footer{
+   background-color:#D9B391 ;  
+   flex: 1 0 100%;
+   order: 5;
+    font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
