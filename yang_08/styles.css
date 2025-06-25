@@ -1,0 +1,148 @@
+/* border-box fix */
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+  /* remove margin and padding on body */
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+/* Grouping example */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background: #ffffff;
+  /* grid layout parent */
+  display: grid;
+  /* create 12 col layout */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(12, minmax(0, 1fr));
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  row-gap: 1px;
+  min-height: 100vh;
+}
+
+/* padding on immediate children of wrapper */
+.wrapper>* {
+  padding: 0px;
+}
+header, footer{
+    width: 100vw;
+  background: #010180;
+  margin: 0px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+display: flex;
+align-items: flex-end;
+justify-content:center ;
+}
+
+header{
+grid-column: 1 / -1;
+height: 55px;
+}
+header img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    text-align: center;
+    
+}
+main {
+  background: #fff;
+  /* span 6 cols */
+  grid-column: 8 / 13;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  grid-row: 6/7;
+border-bottom-right-radius:0px;
+border-style: solid;
+border-color: #010180;
+  border-width: 10px;
+    font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.navbar{
+    grid-column: 3/11;
+    grid-row: 2;
+    background-color: #010180;
+    text-align: center;
+    height: 32px;
+    
+}
+.insidenav{
+    color: #fff;
+    margin: 0;
+    padding: 35px;
+    font-family: "Coral Pixels", serif;
+  font-weight: 400;
+  font-style: normal;
+    
+}
+aside {
+  background: #fff;
+  /* span 3 cols */
+  grid-column: 12 / -1;
+  grid-row: 7/12;
+  height: 400px;
+  width: 320px;
+  position: relative;
+overflow: hidden
+}
+
+aside img{
+    rotate: -30;
+    width: 350px;
+    transform: rotate(-30deg);
+}
+
+
+footer {
+  background: #010180;
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+  grid-row: 12/13;
+  height: 27px;
+  color: #fff;
+    font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
